@@ -14,7 +14,8 @@ BOT_NAME = 'galgame_spider'
 SPIDER_MODULES = ['galgame_spider.spiders']
 NEWSPIDER_MODULE = 'galgame_spider.spiders'
 
-
+USER_AGENT = 'MOZilla/5.0(x11; Linux x86_64; rv:7.0.1)Gecko/20100101 Firefox/7.7'
+DOWNLOAD_DELAY = 0.25
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'galgame_spider (+http://www.yourdomain.com)'
 
@@ -64,9 +65,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'galgame_spider.pipelines.SomePipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'galgame_spider.pipelines.GalgameSpiderPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
