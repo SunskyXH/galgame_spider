@@ -68,7 +68,12 @@ ROBOTSTXT_OBEY = True
 ITEM_PIPELINES = {
     'galgame_spider.pipelines.GalgameSpiderPipeline': 300,
 }
-
+FIELDS_TO_EXPORT = [
+    'addr',
+    'title',
+    'pwd',
+    'date'
+]
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True

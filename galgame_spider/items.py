@@ -17,3 +17,4 @@ class GalgameSpiderItem(scrapy.Item):
     pwd   = scrapy.Field()
     addr  = scrapy.Field()
     title = scrapy.Field()
+    date  = scrapy.Field()
