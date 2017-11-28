@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-
-# Define your item pipelines here
-#
-# Don't forget to add your pipeline to the ITEM_PIPELINES setting
-# See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 import codecs
 import json
 
@@ -21,7 +16,7 @@ class GalgameSpiderPipeline(object):
             line = json.dumps(dict(item), ensure_ascii=False) + "\r\n"
             self.data.append(item)
             self.file.write(line)
-        return '>>FINISH'
+        return '[INFO]FINISH'
     def close_spider(self, spider):
         for i in self.data:
             addr = i['addr']

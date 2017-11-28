@@ -9,27 +9,8 @@ class MyGalgameSpider(scrapy.Spider):
     name = "MGS"
     start_urls = [
         "http://www.mygalgame.com",
-        # "http://www.mygalgame.com/page/2/",
-        # "http://www.mygalgame.com/page/3/",
-        # "http://www.mygalgame.com/page/4/",
-        # "http://www.mygalgame.com/page/5/",
-        # "http://www.mygalgame.com/page/6/",
-        # "http://www.mygalgame.com/page/7/",
-        # "http://www.mygalgame.com/page/8/",
-        # "http://www.mygalgame.com/page/9/",
-        # "http://www.mygalgame.com/page/10/",
-        # "http://www.mygalgame.com/page/11/",
-        # "http://www.mygalgame.com/page/12/",
-        # "http://www.mygalgame.com/page/13/",
-        # "http://www.mygalgame.com/page/14/",
-        # "http://www.mygalgame.com/page/15/",
-        # "http://www.mygalgame.com/page/16/",
-        # "http://www.mygalgame.com/page/17/",
-        # "http://www.mygalgame.com/page/18/",
-        # "http://www.mygalgame.com/page/19/",
-        # "http://www.mygalgame.com/page/20/",
     ]
-    print u"输入爬取的页数:(最大为70)"
+    print u"输入爬取的页数:(最大为72)"
     page_number = raw_input()
     try:
         page_number = int(page_number)
@@ -37,7 +18,7 @@ class MyGalgameSpider(scrapy.Spider):
         print u"请输入正确的数字"
         exit(0)
 
-    if isinstance(page_number, int) and page_number > 0 and page_number <= 70:
+    if isinstance(page_number, int) and page_number > 0 and page_number <= 72:
         if page_number > 1:
             for i in range(2,page_number+1):
                 start_urls.append("http://www.mygalgame.com/page/"+str(i)+"/")
