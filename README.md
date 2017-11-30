@@ -7,7 +7,6 @@
 
 - Scrapy:
 ``` bash
-# Install Scrapy with pip (you need to install python first)
 pip install Scrapy
 ```
 
