@@ -9,7 +9,7 @@ class MyGalgameSpider(scrapy.Spider):
     start_time = time.time()
     name = "MGS"
     start_urls = ["http://www.mygalgame.com"]
-    page_number = 1
+    page_number = 72
     for i in range(2, page_number+1):
         start_urls.append("http://www.mygalgame.com/page/"+str(i)+"/")
 
