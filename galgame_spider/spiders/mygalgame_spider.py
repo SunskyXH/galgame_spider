@@ -9,10 +9,9 @@ class MyGalgameSpider(scrapy.Spider):
     start_time = time.time()
     name = "MGS"
     start_urls = ["http://www.mygalgame.com"]
-    page_number = 72
+    page_number = 1
     for i in range(2, page_number+1):
         start_urls.append("http://www.mygalgame.com/page/"+str(i)+"/")
-    print(u'爬虫程序开始运行')
 
     def parse(self, response):
         for href in response.xpath('//div[@class = "title-article"]/center/h4/a/@href'):
