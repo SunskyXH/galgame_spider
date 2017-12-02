@@ -7,7 +7,7 @@ class GalgameSpiderPipeline(object):
     def __init__(self):
         self.game_list_json = codecs.open('game_list.json','w+',encoding='utf-8')
         self.game_list = codecs.open('game_list','w+',encoding='utf-8')
-        self.change_log = codecs.open('changelog.md', 'r+', encoding='utf-8')
+        self.change_log = codecs.open('changelog', 'r+', encoding='utf-8')
         self.data = []
 
     def process_item(self, item, spider):
